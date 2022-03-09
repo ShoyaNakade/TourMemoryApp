@@ -51,13 +51,7 @@ struct AddEditView: View {
         Section("場所") {
             TextField("住所を入力", text: $memoryNote.address)
         }
-//        Section(header: HStack {
-//            Toggle("日付を設定する", isOn: Binding(isNotNil: $memoryNote.time, defaultValue: Date()) )
-//        }) {
-//            if memoryNote.time != nil {
-//                DatePicker("日付", selection: Binding($memoryNote.time, Date()), displayedComponents: .date)
-//            }
-//        }
+
         Section("日付の設定") {
                 DatePicker("日付", selection: $memoryNote.time, displayedComponents: .date)
         }

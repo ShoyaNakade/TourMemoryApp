@@ -79,15 +79,6 @@ public class MyMemory: ObservableObject {
                 return firstMemory.time ?? Date.now < secondMemory.time ?? Date.now+1
             }
         }
-//        if orderedByDate == .recent {
-//            sorted = notes.sorted { (firstMemory:MemoryNote, secondMemory:MemoryNote) -> Bool in
-//                return firstMemory.time! >= secondMemory.time!
-//            }
-//        } else if orderedByDate == .old {
-//            sorted = notes.sorted { (firstMemory:MemoryNote, secondMemory:MemoryNote) -> Bool in
-//                return firstMemory.time! < secondMemory.time!
-//            }
-//        }
         
         // 2. ratioでソート
         if orderedByRatio == .max {

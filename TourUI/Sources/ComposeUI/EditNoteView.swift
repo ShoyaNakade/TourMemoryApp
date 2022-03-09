@@ -16,7 +16,7 @@ import CoreData
 
 public struct EditNoteView: View {
     //MARK: - PROPERTY
-    private  let generator = UINotificationFeedbackGenerator()
+    private let generator = UINotificationFeedbackGenerator()
     private var controlMemoryModel = ControlMemoryModel(delegate: EditMemory())
     private let maxImageNum = 5 // 写真の最大登録可能枚数
     private var imageOver:Bool {
@@ -28,11 +28,8 @@ public struct EditNoteView: View {
         }
     } // 写真の枚数オーバー
     @EnvironmentObject var myMemory: MyMemory
-    
-    //    @FocusState private var focus: Bool //keyboard
     @Binding public var memoryNote: MemoryNote
     @State var memoryNoteTemp: MemoryNote // 変更を保存する前の値にする。
-    
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var viewContext //coredata
     
@@ -50,15 +47,10 @@ public struct EditNoteView: View {
         config.selectionLimit = 5
         return config
     }
-    let logger = Logger()
-    //    var columns: [GridItem] = Array(repeating: .init(.fixed(100)), count: 3)
-    
+    private let logger = Logger()
     
     //MARK: - FUNCTION
     private func editSave() {
-        //        model.delegate?.save(memoryNote: memoryNote)
-//        controlMemoryModel.delegate?.change(memoryNote: memoryNoteTemp, myMemory: myMemory, viewContext: viewContext)
-        
         controlMemoryModel.delegate?.save(memoryNote: memoryNoteTemp, myMemory: myMemory, viewContext: viewContext) // delegateがEditMemory
     }
     

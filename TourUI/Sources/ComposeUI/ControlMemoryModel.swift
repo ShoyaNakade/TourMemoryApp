@@ -18,10 +18,6 @@ import CoreData
 
 public protocol ControlMemoryProtocol {
     func save(memoryNote: MemoryNote,myMemory: MyMemory, viewContext: NSManagedObjectContext)
-//    func change(memoryNote: MemoryNote,myMemory: MyMemory, viewContext: NSManagedObjectContext)
-//    func DeleteMemoryNote(memoryNote: MemoryNote,myMemory: MyMemory, viewContext: NSManagedObjectContext)
-//    func DeleteAllMemoryNotes(myMemory: MyMemory, viewContext: NSManagedObjectContext)
-//    func ImportMyMemoryToCore(myMemory: MyMemory, viewContext: NSManagedObjectContext)
 }
 
 public class ControlMemoryModel: ObservableObject {
@@ -109,7 +105,6 @@ public class AddMemory: ControlMemoryProtocol {
     
     public func save(memoryNote: MemoryNote,myMemory: MyMemory, viewContext: NSManagedObjectContext) {
         var tmpMemoryNote: MemoryNote = memoryNote
-        // 1detaの追加
         // 1. geoコーディング変換
         CLGeocoder().geocodeAddressString(memoryNote.address) { placemarks, error in
             if let lat = placemarks?.first?.location?.coordinate.latitude {
@@ -158,7 +153,6 @@ public class EditMemory: ControlMemoryProtocol {
                 memoryNoteTemp.coordinate.longitude = lng
             }
             
-
             // LocalDataの変更
             if let targetIndex = myMemory.notes.firstIndex(where: {$0.id == memoryNoteTemp.id}) {
                 // ---------- FireStoreの変更 --------------

@@ -42,21 +42,6 @@ public struct DestinationCardView: View {
                                 .cornerRadius(12)
                                 .foregroundColor(.black)
                         }
-
-                        
-//                        if memoryNote.gallery.count != 0 {
-//                            AsyncImage(url: memoryNote.gallery[0]) { image in
-//                                image
-//                                    .resizable()
-//                                    .scaledToFit()
-//                                    .frame(width:150)
-//                                    .cornerRadius(12)
-//                            } placeholder: {
-//                                    // default image
-//                                Color.gray
-//                            }
-//                        }
-                        
                     }
                     VStack(alignment: .leading) {
                         Text(memoryNote.title)

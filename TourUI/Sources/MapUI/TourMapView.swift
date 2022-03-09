@@ -47,13 +47,6 @@ public struct TourMapView: View {
                 latitude: GPSlocation.location!.coordinate.latitude,
                 longitude: GPSlocation.location!.coordinate.longitude),
                 span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)))
-//            _coordinateRegion = State(initialValue:
-//            MKCoordinateRegion(center: CLLocationCoordinate2D(
-//                latitude: GPSlocation.location!.coordinate.latitude,
-//                longitude: GPSlocation.location!.coordinate.longitude),
-//                span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
-//                )
-//            )
         } else {
             gpsNote.toggle()
         }

@@ -23,7 +23,6 @@ public struct AnnotationItemView: View {
         self.noteType = noteType
         self.frameSize = framesize
         self.image = image
-//        _ratio = State(initialValue: ratio)
         self._ratio = ratio
     }
     

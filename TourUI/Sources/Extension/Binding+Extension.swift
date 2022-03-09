@@ -20,8 +20,7 @@ public extension Binding{
              source.wrappedValue = defaultValue
              }
              return source.wrappedValue ?? defaultValue
-             // nilではないとき左を、nilの時は ?? の右側を返す
-            
+      
         },set:{
             source.wrappedValue = $0
         })

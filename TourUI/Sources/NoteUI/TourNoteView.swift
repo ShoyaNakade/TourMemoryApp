@@ -35,7 +35,6 @@ public struct TourNoteView: View {
                     }//:loop
                 }//:vstack
             }
-//            .searchable(text: $searchText)
             .searchable(text: $myMemory.searchText)
             .navigationBarTitle("旅の思い出", displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
@@ -72,11 +71,6 @@ public struct TourNoteView: View {
 
 struct TourNoteView_Previews: PreviewProvider {
     
-//    class Delegate: ControlMemoryProtocol {
-//        func save(memoryNote: MemoryNote) {
-//            // save
-//        }
-//    }
     static var myMemory = MyMemory(notes: testMemoryNoteData)
     static var previews: some View {
         TabView {

@@ -25,7 +25,7 @@ public struct OrderSettingView: View {
                     Text("新しい順").tag(OrderedByDate.recent)
                     Text("古い順").tag(OrderedByDate.old)
                 } label: {
-                  // none
+                    // none
                 }
                 .pickerStyle(.segmented)
             }
@@ -40,7 +40,7 @@ public struct OrderSettingView: View {
             }
             Section(header: Text("カテゴリー")) {
                 Toggle(isOn: $myMemory.isFilterCategory) {
-                  Text("フィルターの有効化")
+                    Text("フィルターの有効化")
                 }
                 if myMemory.isFilterCategory {
                     ScrollView(.horizontal) {
@@ -95,85 +95,7 @@ public struct OrderSettingView: View {
                 }
             }
             
-            
         }
-//        VStack(alignment:.leading) {
-//            HStack {
-//                Text("日付の順番:")
-//                    .foregroundColor(.primary)
-//                    .font(.subheadline)
-//                Spacer()
-//                Picker(selection: $myMemory.orderedByDate) {
-//                    Text("新しい").tag(OrderedByDate.recent)
-//                    Text("古い").tag(OrderedByDate.old)
-//                } label: {
-//                }
-//                .padding()
-//                .pickerStyle(.segmented)
-//    //            .frame(width: 250)
-//            }
-//            .padding()
-//            HStack {
-//                Text("お気に入り:")
-//                    .foregroundColor(.primary)
-//                    .font(.subheadline)
-//                Spacer()
-//                Picker(selection: $myMemory.orderedByRatio) {
-//                    Text("高い").tag(OrderedByRatio.max)
-//                    Text("低い").tag(OrderedByRatio.min)
-//                } label: {
-//                }
-//                .padding()
-//                .pickerStyle(.segmented)
-//    //            .frame(width: 250)
-//            }
-//            .padding()
-//            Text("カテゴリー")
-//                .padding(.leading,10)
-//            HStack() {
-//                ForEach(Category.allCases, id: \.self) { category in
-//                    Button {
-//                        if myMemory.filterCategories.contains(category) {
-//                            myMemory.filterCategories.remove(category)
-//                        } else {
-//                            myMemory.filterCategories.insert(category)
-//                        }
-//                    } label: {
-//                        VStack {
-//                            if myMemory.filterCategories.contains(category) {
-//                                Image(systemName:category.toImage)
-//                                    .resizable()
-//                                    .scaledToFit()
-//                                    .frame(height: 30 , alignment: .center)
-//                                    .foregroundColor(.red)
-////                                Text(category.text)
-////                                    .font(.caption)
-////                                    .foregroundColor(.red)
-//                            } else {
-//                                Image(systemName:category.toImage)
-//                                    .resizable()
-//                                    .scaledToFit()
-//                                    .frame(height: 30 , alignment: .center)
-//                                    .foregroundColor(.gray)
-////                                Text(category.text)
-////                                    .font(.caption)
-////                                    .foregroundColor(.gray)
-//                            }
-//                        }
-//                    }
-//                    .buttonStyle(.plain)
-//                }
-//                .padding()
-//            }
-//            Button {
-//                presentationMode.wrappedValue.dismiss()
-//            } label: {
-//                Spacer()
-//                Text("完了(閉じる)")
-//                Spacer()
-//            }
-//
-//        }
     }
 }
 

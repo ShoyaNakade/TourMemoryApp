@@ -25,9 +25,6 @@ public struct AddIconView: View {
                 .scaleEffect(self.pulsate ? 1.0 : 0.8)
                 .animation(Animation.easeInOut(duration: 1.3).repeatForever(), value: self.pulsate)
         }
-//        .onAppear() {
-//            self.pulsate.toggle()
-//        }
     }
 }
 

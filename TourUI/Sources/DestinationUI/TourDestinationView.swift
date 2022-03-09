@@ -19,20 +19,8 @@ public struct TourDestinationView: View {
     @EnvironmentObject var myMemory : MyMemory
     @Environment(\.presentationMode) var presentationMode
     
-//    @Environment(\.managedObjectContext) var viewContext
-//    @FetchRequest(
-//        sortDescriptors: [NSSortDescriptor(keyPath: \NotesEntity.time, ascending: true)],
-//        animation: .default)
-//    var Notes: FetchedResults<NotesEntity>
-//    var notetitle: [String] = []
-    
     public init(){
-        // no init
-//        print(Notes.count)
-//
-//        for note in Notes {
-//            notetitle.append(note.title ?? "no")
-//        }
+        
     }
 
     //MARK: - BODY
@@ -54,12 +42,10 @@ public struct TourDestinationView: View {
                     }//:loop
                 }//:vstack
             }
-//            .searchable(text: $searchText)
             .searchable(text: $myMemory.searchText)
             .navigationBarTitle("行きたい所" ,displayMode: .inline)
-//            .navigationBarItems(trailing: Image(systemName: "arrow.up.arrow.down.circle.fill"))
+
             .navigationBarItems(trailing: Button(action: {
-//                myMemory.orderedByRatio = .min
                 isOrderModalActive.toggle()
             }, label: {
                 Image(systemName: "arrow.up.arrow.down.circle.fill")

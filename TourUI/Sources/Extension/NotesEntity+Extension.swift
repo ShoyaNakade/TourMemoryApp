@@ -81,7 +81,6 @@ extension NotesEntity {
     // ロード処理
     func loadImageDatas() -> Data {
         if let loadedData = UserDefaults().data(forKey: "imageDatas") {
-            // ⭐️unarchiveTopLevelObjectWithDataに変更　例外を投げるのでtry?を追加
             return try! NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(loadedData) as! Data
         }
         return UIImage(systemName: "photo")!.jpegData(compressionQuality: 1)!

@@ -42,33 +42,7 @@ public struct MemoryNoteView: View {
     }
     
     private func deleteMemoryNote() {
-//        controlMemoryModel.delegate?.DeleteMemoryNote(memoryNote: memoryNote, myMemory: myMemory, viewContext: viewContext)
-        
         controlMemoryModel.DeleteMemoryNote(memoryNote: memoryNote, myMemory: myMemory, viewContext: viewContext)
-        
-//        // ----------Core Dataの削除------------
-//        let request: NSFetchRequest<NotesEntity> = NotesEntity.fetchRequest()
-//        let predicate = NSPredicate(format:"id = %@", memoryNote.id )
-//        request.predicate = predicate
-//        do {
-//            let requestNotes = try viewContext.fetch(request)
-//            for MyNote in requestNotes {
-//                // 一つだが配列のため
-//                viewContext.delete(MyNote)
-//                }
-//            try viewContext.save()
-//        }
-//        catch let error as NSError {
-//            print("Error: \(error.localizedDescription), \(error.userInfo)")
-//        }
-//        // ------------ここまで------------
-//        // ------------FireStoreからのデータ削除
-////        myMemory.delegate?.DeleteNoteFireStore(memoryNote: memoryNote)
-//
-//        // ----------MemoryNoteの削除------------
-//        if let targetIndex = myMemory.notes.firstIndex(where: {$0.id == memoryNote.id}) {
-//            myMemory.notes.remove(at: targetIndex)
-//        }
     }
     
     
@@ -183,9 +157,6 @@ public struct MemoryNoteView: View {
                         Button("はい"){
                             // 確認
                             deleteMemoryNote()
-//                            if let targetIndex = myMemory.notes.firstIndex(where: {$0.id == memoryNote.id}) {
-//                                myMemory.notes.remove(at: targetIndex)
-//                            }
                             // 前の画面に戻す
                             self.presentationMode.wrappedValue.dismiss()
                         }
