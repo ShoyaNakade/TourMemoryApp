@@ -50,34 +50,7 @@ public struct AddMemoryNoteView: View {
     
     //MARK: - FUNCTION
     private func save() {
-        controlMemoryModel.delegate?.save(memoryNote: memoryNote, myMemory: myMemory, viewContext: viewContext)
-        
-//        // geoコーディング変換
-//        CLGeocoder().geocodeAddressString(memoryNote.address) { placemarks, error in
-//            if let lat = placemarks?.first?.location?.coordinate.latitude {
-//                memoryNote.coordinate.latitude = lat
-//            }
-//            if let lng = placemarks?.first?.location?.coordinate.longitude {
-//                memoryNote.coordinate.longitude = lng
-//            }
-//        }
-//        myMemory.notes.append(memoryNote) // 日記の追加
-//        // coredata to save
-//        NotesEntity.create(in: self.viewContext, memoryNote: memoryNote)
-//        do{
-//            try self.viewContext.save()
-//
-//        } catch{
-//            let nserror = error as NSError
-//            fatalError("Error \(nserror),\(nserror.userInfo)")
-//        }
-//        // fin coredata
-//        memoryNote = MemoryNote.placeholder // 初期化
-//
-//        self.generator.notificationOccurred(.success)
-//        presentationMode.wrappedValue.dismiss()
-        
-        
+        controlMemoryModel.delegate?.save(memoryNote: memoryNote, myMemory: myMemory, viewContext: viewContext)  
     }
     
     //MARK: - BODY

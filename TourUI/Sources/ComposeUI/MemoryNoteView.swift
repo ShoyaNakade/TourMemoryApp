@@ -42,7 +42,9 @@ public struct MemoryNoteView: View {
     }
     
     private func deleteMemoryNote() {
-        controlMemoryModel.delegate?.DeleteMemoryNote(memoryNote: memoryNote, myMemory: myMemory, viewContext: viewContext)
+//        controlMemoryModel.delegate?.DeleteMemoryNote(memoryNote: memoryNote, myMemory: myMemory, viewContext: viewContext)
+        
+        controlMemoryModel.DeleteMemoryNote(memoryNote: memoryNote, myMemory: myMemory, viewContext: viewContext)
         
 //        // ----------Core Dataの削除------------
 //        let request: NSFetchRequest<NotesEntity> = NotesEntity.fetchRequest()

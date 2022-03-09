@@ -17,7 +17,7 @@ import CoreData
 public struct EditNoteView: View {
     //MARK: - PROPERTY
     private  let generator = UINotificationFeedbackGenerator()
-    private var controlMemoryModel = ControlMemoryModel(delegate: AddMemory())
+    private var controlMemoryModel = ControlMemoryModel(delegate: EditMemory())
     private let maxImageNum = 5 // 写真の最大登録可能枚数
     private var imageOver:Bool {
         if memoryNoteTemp.imageData.count > maxImageNum {
@@ -57,39 +57,9 @@ public struct EditNoteView: View {
     //MARK: - FUNCTION
     private func editSave() {
         //        model.delegate?.save(memoryNote: memoryNote)
-        controlMemoryModel.delegate?.change(memoryNote: memoryNoteTemp, myMemory: myMemory, viewContext: viewContext)
-//        CLGeocoder().geocodeAddressString(memoryNoteTemp.address) { placemarks, error in
-//            if let lat = placemarks?.first?.location?.coordinate.latitude {
-//                memoryNoteTemp.coordinate.latitude = lat
-//            }
-//            if let lng = placemarks?.first?.location?.coordinate.longitude {
-//                memoryNoteTemp.coordinate.longitude = lng
-//            }
-//
-//            if let targetIndex = myMemory.notes.firstIndex(where: {$0.id == memoryNoteTemp.id}) {
-//                myMemory.notes[targetIndex] = memoryNoteTemp
-//            }
-//
-//            // ----------Core Dataの変更------------
-//            let request: NSFetchRequest<NotesEntity> = NotesEntity.fetchRequest()
-//            let predicate = NSPredicate(format:"id = %@", memoryNoteTemp.id )
-//            request.predicate = predicate
-//            do {
-//                let requestNotes = try viewContext.fetch(request)
-//                print(requestNotes.count)
-//                for MyNote in requestNotes {
-//                    // 一つなはずだが配列のため
-//                    MyNote.importMemoryNote(in: viewContext, memoryNote: memoryNoteTemp)
-//                }
-//                try viewContext.save()
-//            }
-//            catch let error as NSError {
-//                print("Error getting ShoppingItems: \(error.localizedDescription), \(error.userInfo)")
-//            }
-//            // ----------Core Dataの変更------------
-//            self.generator.notificationOccurred(.success)
-//            presentationMode.wrappedValue.dismiss()
-//        }
+//        controlMemoryModel.delegate?.change(memoryNote: memoryNoteTemp, myMemory: myMemory, viewContext: viewContext)
+        
+        controlMemoryModel.delegate?.save(memoryNote: memoryNoteTemp, myMemory: myMemory, viewContext: viewContext) // delegateがEditMemory
     }
     
     //MARK: - BODY

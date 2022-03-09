@@ -5,6 +5,6 @@
       location = "group:TourUI">
    </FileRef>
    <FileRef
-      location = "group:/Users/nakadeshouya/Desktop/App/TourMemoryApp/Map Note.xcodeproj">
+      location = "container:/Users/nakadeshouya/Desktop/App/TourMemoryApp/Map Note.xcodeproj">
    </FileRef>
 </Workspace>

@@ -33,7 +33,9 @@ public struct SettingView: View {
     }
     
     private func deleteAllMemoryNotes() {
-        controlMemoryModel.delegate?.DeleteAllMemoryNotes(myMemory: myMemory, viewContext: viewContext)
+//        controlMemoryModel.delegate?.DeleteAllMemoryNotes(myMemory: myMemory, viewContext: viewContext)
+        
+        controlMemoryModel.DeleteAllMemoryNotes(myMemory: myMemory, viewContext: viewContext)
     }
     
     
@@ -329,7 +331,7 @@ public struct SettingView: View {
         .alert("バックアップデータを読み込みました。データを更新します。", isPresented: $restoreFinish){
             Button("了解"){
                 print("Thread2: Import start.")
-                controlMemoryModel.delegate?.ImportMyMemoryToCore(myMemory: myMemory, viewContext: viewContext) // coredataに保存
+                controlMemoryModel.ImportMyMemoryToCore(myMemory: myMemory, viewContext: viewContext) // coredataに保存
                 print("Thread2: Import end.")
                 myMemory.isLoading.toggle()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 10 ) {
