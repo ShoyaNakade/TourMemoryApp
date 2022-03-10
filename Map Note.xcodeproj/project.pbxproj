@@ -424,7 +424,7 @@
 				DEVELOPMENT_TEAM = 254G68X5D9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Map Note copy3-Info.plist";
+				INFOPLIST_FILE = TourMemoryApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Map Note";
 				INFOPLIST_KEY_NSLocationUsageDescription = "位置情報を許可することで、あなたの近くにある場所を、より簡単かつ正確にノートへ追加できるようになります。";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報を許可することで、あなたの近くにある場所を、より簡単かつ正確にノートへ追加できるようになります。";
@@ -460,7 +460,7 @@
 				DEVELOPMENT_TEAM = 254G68X5D9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Map Note copy3-Info.plist";
+				INFOPLIST_FILE = TourMemoryApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Map Note";
 				INFOPLIST_KEY_NSLocationUsageDescription = "位置情報を許可することで、あなたの近くにある場所を、より簡単かつ正確にノートへ追加できるようになります。";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報を許可することで、あなたの近くにある場所を、より簡単かつ正確にノートへ追加できるようになります。";

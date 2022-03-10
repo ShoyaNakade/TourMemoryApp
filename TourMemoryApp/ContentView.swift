@@ -26,7 +26,6 @@ struct ContentView: View {
     
     @EnvironmentObject var myMemory : MyMemory
     @State private var selectedTab: Tabs = .map
-    //    @State private var navigationTitle: String = Tabs.map.rawValue
     
     public init() {
         UITabBar.appearance().backgroundColor = UIColor(Color("TabBack"))
@@ -44,21 +43,17 @@ struct ContentView: View {
                         .tabItem {
                             Label("マップ", systemImage: "map")
                         }
-                        .tag(Tabs.map)
-                    //                    .environmentObject(myMemory)
-                    
+                        .tag(Tabs.map)                    
                     TourNoteView()
                         .tabItem {
                             Label("日記", systemImage: "note")
                         }
                         .tag(Tabs.note)
-                    //                    .environmentObject(myMemory)
                     TourDestinationView()
                         .tabItem {
                             Label("行きたい", systemImage: "scalemass")
                         }
                         .tag(Tabs.destination)
-                    //                    .environmentObject(myMemory)
                 }
                 .accentColor(.primary)
                 .sheet(isPresented:  $myMemory.isLogin) {
@@ -78,6 +73,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-        //            .environmentObject(myMemory)
     }
 }
